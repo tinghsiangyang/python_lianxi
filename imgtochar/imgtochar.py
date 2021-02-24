@@ -1,21 +1,18 @@
 from PIL import Image
 import argparse
 
-parse = argparse.ArgumentParser()
+parser = argparse.ArgumentParser()
 
-parse.add_argument('file')
-parse.add_argument('-o', '--output')
-parse.add_argument('--width', type=int, default=80)
-parse.add_argument('--height', type=int, default=80)
+parser.add_argument('file')
+parser.add_argument('-o', '--output')
+parser.add_argument('--width', type=int, default=80)
+parser.add_argument('--height', type=int, default=80)
 
-args = parse.parse_args()
+args = parser.parse_args()
 
 IMG = args.file
-
 WIDTH = args.width
-
 HEIGHT = args.height
-
 OUTPUT = args.output
 
 ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
