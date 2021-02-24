@@ -20,12 +20,10 @@ ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI
 def get_char(r, g, b, alpha=256):
 
     if alpha == 0:
-        return ''
+        return ' '
     
     length = len(ascii_char)
-
     gray = int(0.2126 * r + 0.7152 * g + 0.0772 * b)
-
     unit = (256.0 + 1)/length
 
     return ascii_char[int(gray/unit)]
@@ -35,13 +33,13 @@ if __name__ == '__main__':
     im = Image.open(IMG)
     im = im.resize((WIDTH, HEIGHT), Image.NEAREST)
 
-    txt = ''
+    txt = ""
 
     for i in range(HEIGHT):
         for j in range(WIDTH):
             txt += get_char(*im.getpixel((j, i)))
         
-        txt = '\n'
+        txt += '\n' #啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！！！！！！！！！！！，txt='\n'了，淦
     
     print(txt)
 
