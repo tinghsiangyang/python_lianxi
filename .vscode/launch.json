@@ -7,9 +7,10 @@
         {
             "name": "Python: 当前文件",
             "type": "python",
-            "request": "attach",
+            "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "args": ["/home/ubuntu/python-project/python_lianxi/imgtochar/ascii_dora.png"]
         }
     ]
 }
