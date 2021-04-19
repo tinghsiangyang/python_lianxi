@@ -143,13 +143,13 @@ class GameField(object):
     def is_win(self):
         return any(any(i >= self.win_value for i in row) for row in self.field)
         # i >= self.win_value for i in row 的返回结果时值为Ture和False的可迭代对象
-        '''
-        for row in self.field:
-            for i in row:
-                if i >= self.win_value:
-                    return True
-                else:
-                    return False'''
+
+        # for row in self.field:
+        #     for i in row:
+        #         if i >= self.win_value:
+        #             return True
+        #         else:
+        #             return False
         
         
     def is_gameover(self):
